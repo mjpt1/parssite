@@ -1,0 +1,27 @@
+// Prisma schema for پارس انرژی (Pars Energy)
+// Docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+/// A lead captured from the free-evaluation form.
+model Lead {
+  id             Int      @id @default(autoincrement())
+  name           String
+  phone          String
+  city           String
+  investmentType String
+  powerUsage     String?
+  spaceSize      String?
+  description    String?
+  createdAt      DateTime @default(now())
+
+  @@index([createdAt])
+  @@map("leads")
+}

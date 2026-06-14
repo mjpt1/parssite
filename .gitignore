@@ -1,0 +1,46 @@
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# misc
+.DS_Store
+*.pem
+Thumbs.db
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# local env files
+.env
+.env*.local
+
+# claude code local settings
+/.claude/
+
+# raw source video drops (the project uses public/hero.mp4)
+/DM-AI-Video*.mp4
+
+# local backup of the uncompressed hero video (keep only the compressed hero.mp4)
+/public/hero0.mp4
+
+# prisma
+/prisma/*.db
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+
+# editor
+.vscode/*
+!.vscode/extensions.json
+.idea
